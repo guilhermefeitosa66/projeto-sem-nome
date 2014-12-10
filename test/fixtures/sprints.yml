@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_date: 2014-12-10
+  end_date: 2014-12-10
+  planning_start_date: 2014-12-10
+  planning_end_date: 2014-12-10
+  execution_start_date: 2014-12-10
+  execution_end_date: 2014-12-10
+  review_meeting_date: 2014-12-10
+  retrospective_meeting_date: 2014-12-10
+  release: 
+  project: 
+
+two:
+  start_date: 2014-12-10
+  end_date: 2014-12-10
+  planning_start_date: 2014-12-10
+  planning_end_date: 2014-12-10
+  execution_start_date: 2014-12-10
+  execution_end_date: 2014-12-10
+  review_meeting_date: 2014-12-10
+  retrospective_meeting_date: 2014-12-10
+  release: 
+  project: 

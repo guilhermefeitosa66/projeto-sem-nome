@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  business_value: 1
+  story_points: 1
+  status: 1
+  theme: 
+
+two:
+  description: MyString
+  business_value: 1
+  story_points: 1
+  status: 1
+  theme: 

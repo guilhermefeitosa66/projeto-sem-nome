@@ -1,7 +1,7 @@
 class CreateUserAbilities < ActiveRecord::Migration
   def change
     create_table :user_abilities do |t|
-      t.int :points
+      t.integer :points
       t.references :ability
       t.references :user
 
