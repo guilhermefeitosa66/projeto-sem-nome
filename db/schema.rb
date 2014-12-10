@@ -170,16 +170,6 @@ ActiveRecord::Schema.define(:version => 20141210144319) do
 
   add_index "user_story_acceptance_criterions", ["user_story_id"], :name => "index_user_story_acceptance_criterions_on_user_story_id"
 
-  create_table "user_story_sprints", :force => true do |t|
-    t.integer  "user_story_id"
-    t.integer  "sprint_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "user_story_sprints", ["sprint_id"], :name => "index_user_story_sprints_on_sprint_id"
-  add_index "user_story_sprints", ["user_story_id"], :name => "index_user_story_sprints_on_user_story_id"
-
   create_table "user_tasks", :force => true do |t|
     t.integer  "user_id"
     t.integer  "task_id"

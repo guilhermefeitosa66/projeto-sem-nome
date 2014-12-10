@@ -1,4 +1,9 @@
 class Release < ActiveRecord::Base
+  attr_accessible :deliver_date,
+                  :version,
+                  :sprints_attributes,
+                  :project_id
+  
   belongs_to :project
-  attr_accessible :deliver_date, :version
+  has_many :sprints, :dependent => :destroy
 end

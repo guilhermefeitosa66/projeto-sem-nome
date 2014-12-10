@@ -1,5 +1,7 @@
 class UserTask < ActiveRecord::Base
+  attr_accessible :user_id,
+                  :task_id
+  
   belongs_to :user
   belongs_to :task
-  # attr_accessible :title, :body
 end
