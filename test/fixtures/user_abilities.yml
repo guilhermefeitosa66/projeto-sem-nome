@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  points: 
+  ability: 
+  user: 
+
+two:
+  points: 
+  ability: 
+  user: 
