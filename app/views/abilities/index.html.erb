@@ -1,0 +1,27 @@
+<h1>Habilidades</h1>
+<hr>
+  <%= link_to 'Novo', new_ability_path %> 
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @abilities.each do |ability| %>
+    <tr>
+      <td><%= ability.name %></td>
+      <td><%= ability.description %></td>
+      <td>
+        <%= link_to 'Editar', edit_ability_path(ability.id) %>
+        <%= link_to 'Exibir', show_ability_path(ability.id) %>
+        <%= link_to 'Excluír', destroy_ability_path(ability.id) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
