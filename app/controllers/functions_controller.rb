@@ -21,7 +21,7 @@ class FunctionsController < ApplicationController
 		@function = Function.new(params[:function])
 
 		if @function.save
-			redirect_to_functions_path
+			redirect_to functions_path
 		else
 			@path_to_save = create_function_path
 			render :new
@@ -32,7 +32,7 @@ class FunctionsController < ApplicationController
 		@function = Function.find(params[:id])
 
 		if @function.update_attributes(params[:function])
-			redirect_to_functions_path
+			redirect_to functions_path
 		else
 			@path_to_save = update_function_path(params[:id])
 			render :edit
@@ -45,7 +45,6 @@ class FunctionsController < ApplicationController
 		function.destroy
 	rescue
 	ensure
-		redirect_to_functions_path
+		redirect_to functions_path
 	end
-
 end
