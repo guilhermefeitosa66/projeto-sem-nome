@@ -1,0 +1,24 @@
+<h1>Linguagens</h1>
+<hr>
+<%=link_to 'Novo', new_language_path%>
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Ações</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @languages.each do |language| %>
+		<tr>
+			<td><%= language.name%></td>
+			<td>
+				<%= link_to 'Editar', edit_language_path(language.id) %>
+				<%= link_to 'Exibir', show_language_path(language.id) %>
+				<%= link_to 'Excluir', destroy_language_path(language.id) %>
+						
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
