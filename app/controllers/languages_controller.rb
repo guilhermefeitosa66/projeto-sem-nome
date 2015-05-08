@@ -8,7 +8,7 @@ class LanguagesController < ApplicationController
 	def new
 		@language = Language.new
 		@path_to_save = create_language_path
-	end
+	end	
 
 	def show
 		@language = Language.find(params[:id])
