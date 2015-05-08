@@ -1,0 +1,13 @@
+<%= form_for @local, url: @path_to_save, method: 'post' do |l|%>
+	<%= l.label :name %>
+	<%= l.text_field :name%>
+	<%= l.label :country %>
+	<%= l.text_field :country%>
+	<%= l.label :state %>
+	<%= l.text_field :state%>
+	<%= l.label :city %>
+	<%= l.text_field :city%>
+	<%= l.label :zipcode %>
+	<%= l.text_field :zipcode%>
+	<%= l.submit 'Salvar' %>
+<% end %>

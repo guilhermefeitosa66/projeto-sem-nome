@@ -1,0 +1,31 @@
+<h1>Places</h1>
+<hr>
+	<%= link_to "Novo", new_local_path %>
+
+<table>
+	<thread>
+	<tr>
+		<th>Nome</th>
+		<th>Pais</th>
+		<th>Estado</th>
+		<th>Cidade</th>
+		<th>ZipCode</th>
+	</tr>
+	</thread>
+	<tbody>
+	<% @places.each do |local| %>
+		<tr>
+			<td><%= local.name %></td>
+			<td><%= local.country %></td>
+			<td><%= local.state %></td>
+			<td><%= local.city %></td>
+			<td><%= local.zipcode %></td>
+			<td>
+				<%= link_to 'Editar', edit_local_path(local.id) %>
+				<%= link_to 'Exibir', show_local_path(local.id)   %>
+				<%= link_to 'Excluir', destroy_local_path(local.id)   %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

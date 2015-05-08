@@ -1,0 +1,6 @@
+<%= form_for @function, url: @path_to_save, method: 'post' do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name%>
+
+	<%= f.submit 'Salvar' %>
+<% end %>
