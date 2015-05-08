@@ -1,0 +1,2 @@
+module LanguagesControllerHelper
+end
