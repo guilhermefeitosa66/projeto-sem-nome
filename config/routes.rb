@@ -19,7 +19,7 @@ ProjetoSemNome::Application.routes.draw do
   post '/functions/update/:id' => 'functions#update', as: 'update_function'
   get '/functions/destroy/:id' => 'functions#destroy', as: 'destroy_function'
 
- #routs for module_languages 
+ #routes for module_languages
  get'/languages' => 'languages#index', as: 'languages'
  get '/language/new' => 'languages#new', as: 'new_language'
  post'/language/create' => 'languages#create', as: 'create_language'
@@ -28,4 +28,12 @@ ProjetoSemNome::Application.routes.draw do
  get'/language/show/:id' => 'languages#show', as: 'show_language'
  post'/language/update/:id' => 'languages#update', as: 'update_language'
 
+ #routes for module_local
+ get'/places' => 'places#index', as: 'places'
+ get '/places/new' => 'places#new', as: 'new_local'
+ post'/places/create' => 'places#create', as: 'create_local'
+ get'/places/edit/:id' => 'places#edit', as: 'edit_local'
+ get'/places/destroy/:id' => 'languages#destroy', as: 'destroy_local'
+ get'/places/show/:id' => 'languages#show', as: 'show_local'
+ post'/places/update/:id' => 'languages#update', as: 'update_local'
 end
