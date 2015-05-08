@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
 
 	def update
 		@project = Project.find(params[:id])
-		if project_update_attributes(params[:project])
+		if @project.update_attributes(params[:project])
 			redirect_to projects_path
 		else
 			@path_to_save = update_project_path(params[:id])

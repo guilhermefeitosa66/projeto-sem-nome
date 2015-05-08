@@ -9,7 +9,7 @@
 	<%= f.label :size %>
 	<%= f.text_field :size %>
 
-	<%= f.collection_select :local_id, Local.all, :id, :country %>
+	<%= f.collection_select :local_id, Local.all, :id, :country, prompt: true %>
 
 	<%= f.submit 'Salvar'%>
 <% end %>
