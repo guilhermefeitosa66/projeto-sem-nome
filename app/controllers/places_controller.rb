@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   def index
-    @local = Local.all
+    @places = Local.all
   end
 
   def new
@@ -21,7 +21,7 @@ class PlacesController < ApplicationController
     @local = Local.new(params[:local])
 
     if @local.save
-      redirect_to local_path
+      redirect_to places_path
     else
       @path_to_save = create_local_path
       render :new
@@ -32,7 +32,7 @@ class PlacesController < ApplicationController
     @local = Local.find(params[:id])
 
     if @local.update_attributes(params[:local])
-      redirect_to local_path
+      redirect_to places_path
     else
       @path_to_save = update_local_path(params[:id])
       render :edit
@@ -44,7 +44,7 @@ class PlacesController < ApplicationController
     local.destroy
   rescue
   ensure
-    redirect_to local_path
+    redirect_to places_path
   end
 
 end

@@ -33,7 +33,7 @@ ProjetoSemNome::Application.routes.draw do
  get '/places/new' => 'places#new', as: 'new_local'
  post'/places/create' => 'places#create', as: 'create_local'
  get'/places/edit/:id' => 'places#edit', as: 'edit_local'
- get'/places/destroy/:id' => 'languages#destroy', as: 'destroy_local'
- get'/places/show/:id' => 'languages#show', as: 'show_local'
- post'/places/update/:id' => 'languages#update', as: 'update_local'
+ get'/places/destroy/:id' => 'places#destroy', as: 'destroy_local'
+ get'/places/show/:id' => 'places#show', as: 'show_local'
+ post'/places/update/:id' => 'places#update', as: 'update_local'
 end
