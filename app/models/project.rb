@@ -10,6 +10,12 @@ class Project < ActiveRecord::Base
                   :releases_attributes,
                   :sprints_attributes,
                   :themes_attributes
+                validates :name, presence: true
+                validates :end_date, presence: true
+                validates :start_date, presence: true
+                validates :size, presence: true
+                validates :local_id, presence: true
+
                   
   
   belongs_to :local

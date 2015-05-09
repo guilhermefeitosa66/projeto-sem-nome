@@ -10,7 +10,7 @@ ProjetoSemNome::Application.routes.draw do
   post '/abilities/update/:id' => 'abilities#update', as: 'update_ability'
   get '/abilities/destroy/:id' => 'abilities#destroy', as: 'destroy_ability'
 
-  #routes for the funciotn module
+  #routes for the function module
   get '/functions' => 'functions#index', as: 'functions'
   get '/functions/new' => 'functions#new', as: 'new_function'
   get '/functions/edit/:id' => 'functions#edit', as: 'edit_function'
