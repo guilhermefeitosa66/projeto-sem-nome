@@ -1,0 +1,29 @@
+<h1>Projeto</h1>
+<hr>
+<%= link_to 'Novo', new_project_path %>
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Data inicial</th>
+			<th>Data final</th>
+			<th>Tamanho</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @projects.each do |project| %>
+		<tr>
+			<td><%= project.name%></td>
+			<td><%= project.start_date%></td>
+			<td><%= project.end_date%></td>
+			<td><%= project.size%></td>
+			<td>
+				<%= link_to 'Editar', edit_project_path(project.id) %>
+				<%= link_to 'Exibir', show_project_path(project.id) %>
+				<%= link_to 'Excluir', destroy_project_path(project.id) %>
+						
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
