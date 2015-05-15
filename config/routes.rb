@@ -1,5 +1,5 @@
 ProjetoSemNome::Application.routes.draw do
-  # get '/users' => 'users#index'
+  root to: 'welcome#index'
 
   #routes for the ability module
   get '/abilities' => 'abilities#index', as: 'abilities'
@@ -44,4 +44,28 @@ ProjetoSemNome::Application.routes.draw do
  get'/places/destroy/:id' => 'places#destroy', as: 'destroy_local'
  get'/places/show/:id' => 'places#show', as: 'show_local'
  post'/places/update/:id' => 'places#update', as: 'update_local'
+
+ #errors routes
+ get '/notfound' => 'errors#404', as: 'notfound'
+
+ #sessions routes
+ post '/sessions/start' => 'sessions#start_session', as: 'start_session'
+ get '/sessions/end' => 'sessions#end_session', as: 'end_session'
+
+ #dashboard routes
+ get '/dashboard' => 'dashboard#index', as: 'dashboard'
+
+ #users routes
+ get '/users' => 'users#index', as: 'users'
+ get '/user/new' => 'users#new', as: 'new_user'
+ get '/user/edit/:id' => 'users#edit', as: 'edit_user'
+ get '/user/show/:id' => 'users#show', as: 'show_user'
+ post '/user/create' => 'users#create', as: 'create_user'
+ post '/user/update/:id' => 'users#update', as: 'update_user'
+ get '/user/destroy/:id' => 'users#destroy', as: 'destroy_user'
+ get '/user/profile/edit' => 'users#edit_profile', as: 'edit_profile_user'
+ post '/user/profile/update' => 'users#update_profile', as: 'update_profile_user'
+ get '/user/password/change' => 'users#change_password', as: 'change_password_user'
+ post '/user/password/update' => 'users#update_password', as: 'update_password_user'
+
 end
